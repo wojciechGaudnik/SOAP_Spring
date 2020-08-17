@@ -1,0 +1,28 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost/item"
+           targetNamespace="http://localhost/item" elementFormDefault="qualified">
+
+    <xs:element name="getItemRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getItemResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="item" type="tns:item"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="item">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="price" type="xs:double"/>
+            <xs:element name="weight" type="xs:float"/>
+            <xs:element name="size" type="xs:float"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
